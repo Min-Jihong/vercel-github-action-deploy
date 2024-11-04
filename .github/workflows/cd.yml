@@ -1,0 +1,17 @@
+name: Vercel Project Name Display
+
+on:
+  workflow_dispatch:
+    inputs:
+      vercelProjectName:
+        description: "The name of the Vercel project"
+        required: true
+        type: string
+
+jobs:
+  display_vercel_project_name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display Vercel Project Name
+        run: |
+          echo "Vercel Project Name: ${{ github.event.inputs.vercelProjectName }}"
